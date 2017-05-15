@@ -16,8 +16,8 @@ body {
 .main > h1 {
   font-family: 'Pacifico', cursive;
   color: #FF5E5B;
-  font-size: 4em;
-  margin: 0.7em 0 0.5em 0;
+  font-size: 3.5em;
+  margin: 0.3em 0 0.1em 0;
 }
 
 .forms {
@@ -30,26 +30,80 @@ body {
   background-color: #ffffff;
   border-radius: 20px;
   margin: 1em 0;
-  padding: 1em;
-  height: 30vh;
+  padding: 0.3em;
+  height: 37vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+.form-parts > h2 {
+  margin: 0.5em;
+  display: flex;
 }
 
 .form-el {
-  margin: 0.5em;
+  /*margin: 0.5em;*/
+}
+
+.index-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding: 0 0.5em;
 }
 
 input {
   line-height: 1.5em;
+  padding: 0.3em 0 0 0;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  margin: 0.2em;
+  font-size: 0.9em;
+}
+
+input:focus {
+  border-bottom: solid 2px #969696;
+  outline: none;
+}
+
+.form-btn {
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #FF5E5B;
+  color: #ffffff;
+  border: none;
+  padding: 0.5em 1em;
+  margin: 1em 1em 0.3em 1em;
+  width: 60%;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.form-btn:focus {
+  border: none;
+}
+
+.form-btn:hover {
+  background-color: #00CECB;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 .guest-login {
-  background-color: #ffffff;
+  background-color: #FF5E5B;
+  color: #ffffff;
   border-radius: 20px;
   text-decoration: none;
   margin: 1em 0;
+}
+
+.guest-login:hover {
+  background-color: #00CECB;
+  color: #ffffff;
 }
 
 .guest > h2 {
@@ -62,6 +116,15 @@ input {
 
 
 @media (min-width: 800px) {
+  .main {
+    height: 97vh;
+    justify-content: center;
+  }
+
+  .main > h1 {
+    font-size: 6em;
+  }
+
   .forms {
     flex-direction: row;
     width: 100%;
@@ -69,8 +132,14 @@ input {
   }
 
   .form-parts {
-    width: 40%;
+    width: 37%;
     margin: 1.5em;
+  }
+
+  @media (max-height: 630px) {
+    .main {
+      height: auto;
+    }
   }
 
 }
